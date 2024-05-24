@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+body {
+    font-family: 'Manrope', sans-serif;
+    background-color: #000;
+    color: #fff;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: left;
+    max-width: 600px;
+    padding: 20px;
+    border: 1px solid #333;
+    border-radius: 10px;
+    background-color: #111;
+    overflow: hidden; 
+    position: relative; 
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.profile-img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.icons img {
+    width: 30px;
+    height: 30px;
+    filter: grayscale(100%);
+}
+
+h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+.description {
+    font-size: 1.2em;
+    color: #bbb;
+    margin: 10px 0 0 0;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #444;
+    margin: 20px 0;
+}
+
+h2 {
+    font-size: 1.75em;
+    margin-bottom: 20px;
+}
+
+.work p {
+    font-size: 1.1em;
+    margin: 10px 0;
+    margin-bottom: 20px;
+}
+
+.work p strong {
+    font-weight: 400;
+    color: #bbb;
+}
+
+.icon-button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.icons img {
+    width: 30px;
+    height: 30px;
+}
+
+.icon-button img:hover {
+    filter: none;
+    transform: scale(1.09);
+}
+
+.cursor {
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    margin-left: 5px;
+}
+
+.cursor::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background-color: white;
+    animation: blink-caret 0.75s step-end infinite;
+}
+
+@keyframes blink-caret {
+    from, to {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+.fade-in {
+    animation: fadeIn 1s forwards;
+}
+
+.fade-out {
+    animation: fadeOut 1s forwards; 
+}
+
+.project-cards-container {
+    position: relative;
+    height: 220px; 
+    overflow: hidden;
+}
+
+.project-card {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: none;
+    margin-bottom: 20px;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 1s ease, transform 1s ease; 
+}
+
+.project-card.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.project-card.next {
+    display: block;
+    opacity: 0.5;
+    transform: translateY(120%); 
+    filter: blur(1px); /* Reduce blur effect */
+}
+
+.project-details {
+    padding: 20px;
+}
+
+.project-details h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.icons img {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+.project-links a {
+    margin-right: 10px;
+}
+
+.slideshow-indicators {
+    display: flex;
+    align-items: center;
+    gap: 5px; 
+    margin-bottom: 10px; 
+}
+
+.indicator {
+    width: 10px;
+    height: 10px;
+    background-color: #555;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.indicator.active {
+    background-color: #fff;
+}
+
+.indicator:hover {
+    background-color: #aaa;
+}
+
+
+
+.project-card:nth-child(odd) {
+    background-color: #333;
+}
+
+.project-card:nth-child(even) {
+    background-color: #444;
+}
+
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+.project-card.next {
+    display: block;
+    opacity: 0.5;
+    transform: translateY(120%); 
+    filter: blur(1px); 
+    animation: fadeOut 1s forwards; 
+}
+
+.work-header {
+    display: flex;
+    align-items: center;
+}
+
+.slideshow-indicators {
+    display: flex;
+    margin-left: auto;
+}
+
+.slideshow-indicators .indicator {
+    width: 10px;
+    height: 10px;
+    background-color: #555;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+
+
+.slideshow-indicators .indicator.active {
+    background-color: #fff;
+}
