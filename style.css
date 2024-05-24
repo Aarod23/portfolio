@@ -19,8 +19,8 @@ body {
     border: 1px solid #333;
     border-radius: 10px;
     background-color: #111;
-    overflow: hidden; 
-    position: relative; 
+    overflow: hidden;
+    position: relative;
 }
 
 .header {
@@ -54,6 +54,18 @@ body {
     filter: grayscale(100%);
 }
 
+.icon-button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.icon-button img:hover {
+    filter: none;
+    color: #fff;
+}
+
 h1 {
     font-size: 2.5em;
     margin: 0;
@@ -85,23 +97,6 @@ h2 {
 .work p strong {
     font-weight: 400;
     color: #bbb;
-}
-
-.icon-button {
-    border: none;
-    background: none;
-    cursor: pointer;
-    padding: 0;
-}
-
-.icons img {
-    width: 30px;
-    height: 30px;
-}
-
-.icon-button img:hover {
-    filter: none;
-    color: #fff;
 }
 
 .cursor {
@@ -145,12 +140,12 @@ h2 {
 }
 
 .fade-out {
-    animation: fadeOut 1s forwards; 
+    animation: fadeOut 1s forwards;
 }
 
 .project-cards-container {
     position: relative;
-    height: 220px; 
+    height: 220px;
     overflow: hidden;
 }
 
@@ -167,7 +162,7 @@ h2 {
     border-radius: 10px;
     overflow: hidden;
     opacity: 0;
-    transition: opacity 1s ease, transform 1s ease; 
+    transition: opacity 1s ease, transform 1s ease;
 }
 
 .project-card.active {
@@ -179,8 +174,8 @@ h2 {
 .project-card.next {
     display: block;
     opacity: 0.5;
-    transform: translateY(120%); 
-    filter: blur(1px); /* Reduce blur effect */
+    transform: translateY(120%);
+    filter: blur(1px);
 }
 
 .project-details {
@@ -192,7 +187,7 @@ h2 {
     margin-bottom: 10px;
 }
 
-.icons img {
+.project-details .icons img {
     width: 20px;
     height: 20px;
     margin-right: 5px;
@@ -206,8 +201,8 @@ h2 {
 .slideshow-indicators {
     display: flex;
     align-items: center;
-    gap: 5px; 
-    margin-bottom: 10px; 
+    gap: 5px;
+    margin-bottom: 10px;
 }
 
 .indicator {
@@ -227,28 +222,12 @@ h2 {
     background-color: #aaa;
 }
 
-
-
 .project-card:nth-child(odd) {
     background-color: #333;
 }
 
 .project-card:nth-child(even) {
     background-color: #444;
-}
-
-
-@keyframes fadeOut {
-    from { opacity: 1; }
-    to { opacity: 0; }
-}
-
-.project-card.next {
-    display: block;
-    opacity: 0.5;
-    transform: translateY(120%); 
-    filter: blur(1px); 
-    animation: fadeOut 1s forwards; 
 }
 
 .work-header {
@@ -268,7 +247,6 @@ h2 {
     border-radius: 50%;
     margin: 0 5px;
 }
-
 
 .slideshow-indicators .indicator.active {
     background-color: #fff;
