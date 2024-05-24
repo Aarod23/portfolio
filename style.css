@@ -100,7 +100,7 @@ h2 {
 
 .icon-button img:hover {
     filter: none;
-    transform: scale(1.09);
+    color: #fff;
 }
 
 .cursor {
@@ -195,6 +195,7 @@ h2 {
     width: 20px;
     height: 20px;
     margin-right: 5px;
+    color: #bbb;
 }
 
 .project-links a {
