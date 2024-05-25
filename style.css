@@ -53,6 +53,8 @@ body {
     filter: grayscale(100%);
 }
 
+
+
 h1 {
     font-size: 2.5em;
     margin: 0;
@@ -101,6 +103,8 @@ h2 {
 .icon-button img:hover {
     filter: none;
     color: #fff;
+    scale: 1.07;
+
 }
 
 .cursor {
